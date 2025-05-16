@@ -1,0 +1,10 @@
+#######################################
+# Syntax Coloring Map for AutoColumpio
+#######################################
+
+AutoColumpio	KEYWORD1
+iniciar		KEYWORD2
+calibrar	KEYWORD2
+obtenerPesoGramos	KEYWORD2
+escalarPeso	KEYWORD2
+detectarNino	KEYWORD2
