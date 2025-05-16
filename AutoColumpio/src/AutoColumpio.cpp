@@ -45,5 +45,4 @@ void AutoColumpio::tare() {
 void AutoColumpio::setScale(float factor) {
   _factorEscala = factor;
   scale.set_scale(_factorEscala);
-  _escalaEstablecida = true;
 }
