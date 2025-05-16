@@ -28,10 +28,6 @@ float AutoColumpio::obtenerPesoGramos(uint8_t muestras) {
     return scale.get_units(muestras);
 }
 
-float AutoColumpio::escalarPeso(float pesoOriginal, float factor) {
-    return (pesoOriginal / 1000.0) * factor;
-}
-
 const char* AutoColumpio::detectarNino(float pesoEscaladoKg) {
     if (pesoEscaladoKg < 10) {
         return "No";
@@ -40,4 +36,14 @@ const char* AutoColumpio::detectarNino(float pesoEscaladoKg) {
     } else {
         return "Peso excedido";
     }
+}
+
+void AutoColumpio::tare() {
+  scale.tare();
+}
+
+void AutoColumpio::setScale(float factor) {
+  _factorEscala = factor;
+  scale.set_scale(_factorEscala);
+  _escalaEstablecida = true;
 }

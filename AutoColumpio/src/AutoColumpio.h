@@ -10,13 +10,15 @@ public:
     void iniciar();
     void calibrar();
     float obtenerPesoGramos(uint8_t muestras = 10);
-    float escalarPeso(float pesoOriginal, float factor = 100.0);
     const char* detectarNino(float pesoEscaladoKg);
+    void tare();
+    void setScale(float factor);
 
 private:
     HX711 scale;
     int _doutPin;
     int _sckPin;
+    float _factorEscala;
 };
 
 #endif
